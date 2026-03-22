@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+.installed.cfg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Licensed content — do not commit
+decks/*
+pdf/*
+
+# Ignore Claude
+CLAUDE.md
+.claudeignore
+ClaudeIgnore/
+
+# Ignore Folders
+ClaudeIgnore/
+GitIgnore/
+spreads/*
+tables/*
+
+# Saved layouts and exports (user-generated, not project files)
+*.json
+outputs/
+
+####################
+# ALLOW Exceptions #
+####################
+
+# deck.json Template
+!deckTemplate.json
+
+# Spreads - ALLOW
+
+!spreads/Sample Rectangle.png
+!spreads/Sample Square.png
+
+# Tables - ALLOW
+!tables/bg1.png
+!tables/bg2.jpg
+
+# Deck Exceptions - ALLOW
+!decks/Blank - Sample - Rectangle/
+!decks/Blank - Sample - Rectangle/**
+!decks/Blank - Sample - Rectangle/deck.json
+
+!decks/Blank - Sample - Two-Sided/
+!decks/Blank - Sample - Two-Sided/**
+!decks/Blank - Sample - Two-Sided/deck.json
+
+!decks/Blank - Sample/
+!decks/Blank - Sample/**
+!decks/Blank - Sample/deck.json

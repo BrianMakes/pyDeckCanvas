@@ -1,0 +1,12 @@
+{
+  "piles": ["Pile A", "Pile B", "."],
+
+  "card_width": 500,
+  "card_height": 500,
+
+  "card_size": {
+    "Pile A": [375, 525],
+    "Pile B": [500, 700],
+    ".": [500, 500]
+  }
+}

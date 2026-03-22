@@ -1,0 +1,6 @@
+# Core app dependencies
+pygame>=2.1.0
+Pillow>=9.0.0
+
+# SDEextract.py — CLI tool for extracting cards from PDF decks
+pymupdf>=1.23.0

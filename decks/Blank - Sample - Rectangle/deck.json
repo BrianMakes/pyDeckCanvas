@@ -1,0 +1,11 @@
+{
+  "piles": [
+    "Explorer",
+    "Power",
+    "Threat",
+    "World",
+    "System"
+  ],
+  "card_width": 600,
+  "card_height": 900
+}
