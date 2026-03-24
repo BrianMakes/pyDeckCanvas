@@ -70,6 +70,9 @@ outputs/
 # Tables - ALLOW
 !tables/bg1.png
 !tables/bg2.jpg
+!tables/pyDeckCanvas.png
+!tables/pydeckcanvas1.png
+!tables/pydeckcanvas2.png
 
 # Deck Exceptions - ALLOW
 !decks/Blank - Sample - Rectangle/
