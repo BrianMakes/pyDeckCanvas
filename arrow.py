@@ -183,15 +183,15 @@ def draw_arrow_pil(draw, arrow, x1, y1, x2, y2):
 
     # Head size: weight-based, capped at 10% of arrow length so two heads on a
     # both-ended arrow never eat the shaft and create a diamond shape.
-    head_w   = max(6,  min(int(arrow.weight * 9.5), int(length * 0.10)))
-    head_len = max(12, int(head_w * 1.62))
+    head_w   = max(4,  min(int(arrow.weight * 3.15), int(length * 0.10)))
+    head_len = max(9,  int(head_w * 1.62))
 
     shaft_x2 = x2 - ux * head_len
     shaft_y2 = y2 - uy * head_len
     shaft_x1 = x1 + (ux * head_len if arrow.both_ends else 0)
     shaft_y1 = y1 + (uy * head_len if arrow.both_ends else 0)
 
-    shaft_w = max(2, int(head_w * 0.45))
+    shaft_w = max(1, int(head_w * 0.45))
     if arrow.style == "rope":
         _draw_rope_pil(draw, shaft_x1, shaft_y1, shaft_x2, shaft_y2,
                        ux, uy, px, py, color, shaft_w)
@@ -219,9 +219,9 @@ def _draw_rope_pil(draw, x1, y1, x2, y2, ux, uy, px, py, color, width=4):
     shaft_len = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
     if shaft_len < 2:
         return
-    n_pts = max(20, int(shaft_len / 8))
-    amp   = max(6, int(shaft_len * 0.015))
-    waves = max(2, int(shaft_len / 60))
+    n_pts = max(20, int(shaft_len / 4))
+    amp   = max(3, 6)
+    waves = max(2, int(shaft_len / 40))
     pts = []
     for i in range(n_pts + 1):
         t   = i / n_pts
@@ -237,8 +237,8 @@ def _draw_chain_pil(draw, x1, y1, x2, y2, ux, uy, px, py, color, width=2):
     shaft_len  = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
     if shaft_len < 2:
         return
-    link_major = max(16, int(shaft_len * 0.04))
-    link_minor = max(7,  int(link_major * 0.5))
+    link_major = 14
+    link_minor = 7
     spacing    = link_major * 1.8
     n_links    = max(1, int(shaft_len / spacing))
     arrow_ang  = math.atan2(uy, ux)
